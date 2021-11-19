@@ -34,6 +34,28 @@
                 </div>
             </div>
         </nav>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+            <div class="alert alert-danger alert-dismissable fade show" role=alert>
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% else %}
+            <div class="alert alert-success alert-dismissable fade show" role=alert>
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+<!--        Main Content Below -------------------------------->
         <div class="container">
         {% block content %}
         {% endblock %}
@@ -56,10 +78,10 @@
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
           crossorigin="anonymous"
         ></script>
-        <script
-          type="text/javascript"
-          src="{{ url_for('static', filename='index.js') }}"
-        ></script>
+<!--        <script-->
+<!--          type="text/javascript"-->
+<!--          src="{{ url_for('static', filename='index.js') }}"-->
+<!--        ></script>-->
     </body>
 
 
