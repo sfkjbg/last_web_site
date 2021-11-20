@@ -33,3 +33,6 @@ def sign_up():
 
     return render_template('sign_up.html')
 
+@auth.route('/stocks', methods=['GET', 'POST'])
+def stocks():
+    return render_template('stocks.html')
