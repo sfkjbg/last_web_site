@@ -62,5 +62,6 @@ def sign_up():
 
 
 @auth.route('/stocks', methods=['GET', 'POST'])
+@login_required
 def stocks():
     return render_template('stocks.html')
