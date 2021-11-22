@@ -37,3 +37,4 @@ def delete_note():
             flash('Note deleted', category='success')
 
     return jsonify({})
+

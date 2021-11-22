@@ -60,8 +60,3 @@ def sign_up():
 
     return render_template('sign_up.html', user=current_user)
 
-## Moved to views.py
-# @auth.route('/stocks', methods=['GET', 'POST'])
-# @login_required
-# def stocks():
-#     return render_template('stocks.html')
