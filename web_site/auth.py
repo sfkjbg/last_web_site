@@ -15,7 +15,7 @@ def login():
         user = User.query.filter_by(email=email).first()
         if user:
             if check_password_hash(user.password, password):
-                flash('Logged in success', category='success')
+                flash('Logged in successfully.',category='success')
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
             else:
@@ -23,7 +23,7 @@ def login():
         else:
             flash('Email does not exist', category='error')
 
-    return render_template("login.html", text='"from" test_text_ (auth.py) (login.html)')
+    return render_template("login.html", user=current_user, text='"from" test_text_ (auth.py) (login.html)')
 
 @auth.route('/logout')
 @login_required
@@ -58,10 +58,10 @@ def sign_up():
             flash("Account Created", category='success')
             return redirect(url_for('views.home'))
 
-    return render_template('sign_up.html')
+    return render_template('sign_up.html', user=current_user)
 
-
-@auth.route('/stocks', methods=['GET', 'POST'])
-@login_required
-def stocks():
-    return render_template('stocks.html')
+## Moved to views.py
+# @auth.route('/stocks', methods=['GET', 'POST'])
+# @login_required
+# def stocks():
+#     return render_template('stocks.html')
