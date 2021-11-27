@@ -28,3 +28,7 @@ def tesla_charts():
 @pages.route('/pltr_charts', methods=['GET', 'POST'])
 def pltr_charts():
     return render_template('pltr_charts.html', user=current_user)
+
+@pages.route('/photos', methods=['GET', 'POST'])
+def photos():
+    return render_template('photos.html', user=current_user)
