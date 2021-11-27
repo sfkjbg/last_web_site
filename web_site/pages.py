@@ -15,7 +15,16 @@ def stocks():
 @login_required
 def admin():
     return render_template('admin.html', user=current_user)
+
 @pages.route('/chains', methods=['GET', 'POST'])
 @login_required
 def chains():
     return render_template('chains.html', user=current_user)
+
+@pages.route('/tesla_charts', methods=['GET', 'POST'])
+def tesla_charts():
+    return render_template('tesla_charts.html', user=current_user)
+
+@pages.route('/pltr_charts', methods=['GET', 'POST'])
+def pltr_charts():
+    return render_template('pltr_charts.html', user=current_user)
