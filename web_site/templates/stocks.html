@@ -3,35 +3,70 @@
 {% block content%}
 
 <h1 align="center"> Stock Portfolio </h1>
-<!--<div class="container-fluid">-->
-<!--  ...-->
-<!--</div>-->
 
-<div align="center">
-  <div class="card-group">
-    <div class="card h=100" style="width: 18rem;" width="100px">
-      <img src="/static/$TSLA.png" class="card-img-top" alt="$TSLA logo">
-      <div class="card-body">
-        <h5 class="card-title">Tesla Portfolio</h5>
-        <p class="card-text">Take a look at the Tesla financials </p>
-        <a href="tesla_charts" class="btn btn-primary">Enter TSLA</a>
-      </div>
-    </div>
 
-    <div class="card" style="width: 18rem;">
-    <img src="/static/pltr.png" class="card-img-top" alt="PLTR logo">
+<!--<div align="center">-->
+<!--  <div class="card-group h=100">-->
+<!--      <div class="card" style="width: 18rem;">-->
+<!--        <img src="/static/$TSLA.png" class="card-img-top" alt="$TSLA logo">-->
+<!--        <div class="card-body">-->
+<!--            <h5 class="card-title">Tesla Portfolio</h5>-->
+<!--            <p class="card-text">Take a look at the Tesla financials </p>-->
+<!--            <a href="tesla_charts" class="btn btn-primary">Enter TSLA</a>-->
+<!--          </div>-->
+
+<!--      <div class="card" style="width: 18rem;">-->
+<!--        <img src="/static/pltr.png" class="card-img-top" alt="PLTR logo">-->
+<!--        <div class="card-body">-->
+<!--        <h5 class="card-title">Palantir Portfolio</h5>-->
+<!--        <p class="card-text">Take a look at the Palantir financials </p>-->
+<!--        <a href="pltr_charts" class="btn btn-primary">Enter PLTR</a>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+<div class="card-group">
+  <!-- pltr card -->
+  <div class="card">
+    <img class="card-img-top" src="/static/pltr.png" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Palantir Portfolio</h5>
-      <p class="card-text">Take a look at the Palantir financials </p>
-      <a href="pltr_charts" class="btn btn-primary">Enter PLTR</a>
+      <h5 class="card-title">Tesla Portfolio</h5>
+      <p class="card-text">Take a look at the Tesla financials </p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div align="center">
+        <a href="pltr_charts" class="btn btn-primary">Enter PLTR</a>
+        </div>
+
     </div>
   </div>
+  <!-- tsla card -->
+  <div class="card">
+    <img class="card-img-top" src="/static/$TSLA.png" alt="tsla_logo">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+      <div align="center">
+        <a href="tesla_charts" class="btn btn-primary">Enter TSLA</a>
+    </div></p>
+    </div>
+  </div>
+  <!-- rklb card -->
+  <div class="card">
+    <img class="card-img-top" src="/static/rklb.png" alt="rklb_logo">
+    <div class="card-body">
+      <h5 class="card-title">Rocket Lab</h5>
+      <p class="card-text">Small sat company looking to reuse rockets</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div align="center">
+        <a href="rklb" class="btn btn-primary">Enter RKLB</a>
+        </div>
+    </div>
   </div>
 </div>
-
-
-</div>
-
 
 
 

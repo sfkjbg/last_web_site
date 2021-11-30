@@ -18,10 +18,14 @@ def create_app():
     from .views import views
     from .auth import auth
     from .pages import pages
+    from .stocks_sublist import sub
+
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
     app.register_blueprint(pages,url_prefix='/')
+    app.register_blueprint(sub,url_prefix='/')
+
     from .models import User, Note
 
     create_database(app)

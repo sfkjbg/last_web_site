@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %} SOL Page {% endblock %}
+<!--above is tab title -->
+{% block content%}
+
+<h1 align="center"> Solana Page {{ coin_price }} </h1>
+<div align="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <b> Total $ Value of SOL</b><br>
+{{ tots}}
+
+    <br>
+    <br>
+    <b>Solana Coin Price </b><br>
+{{ coin_price }}
+
+    <br>
+    <br>
+<b>{{ funcs }}</b><br>
+{{ api }}
+
+</div>
+
+{% endblock %}

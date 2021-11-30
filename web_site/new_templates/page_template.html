@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<meta></meta>
+<title>Page Templates</title>
+</head>
+
+
+<body>
+<h1>To Do </h1>
+<ul>
+
+<li>3D printers
+<li>crypto
+<li>spaceX
+<li>meh_gauge
+<li>starlink
+<li>boring
+<li>rklb
+<li>notes
+
+<li>neuralink
+</ul>
+<p>
+<div align="center">
+    <hr>
+    <h2>__INIT__.py</h2>
+    for new 'page views'<br><br>
+    from <b><strong>.</strong></b>page import page<br>
+    app.register_blueprint(page, url_prefix='/')
+</p>
+<hr>
+<p>
+    <h2>Pages.py</h2>
+        - added to pages.py<br>
+   <p> @pages.route('/photos', methods=['GET', 'POST'])<br></p>
+    <p>def photos():<br>
+        return render_template('photos.html', user=current_user)<br></p>
+</p>
+<hr><p><h2>Page.html</h2>
+    <p>{% extends "base.html" %} {% block title %} Photos Page {% endblock %}</p>
+    <p>{% block content%}</p><br></p>
+    <p>  {% endblock %}</p>
+
+</div>
+</body>
+
+
+

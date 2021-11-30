@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User, db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
+from .models import Note, Funcs, Api
 
 
 pages = Blueprint('pages', __name__)
@@ -32,3 +33,11 @@ def pltr_charts():
 @pages.route('/photos', methods=['GET', 'POST'])
 def photos():
     return render_template('photos.html', user=current_user)
+
+@pages.route('/3d', methods=['GET', 'POST'])
+def _3d_print():
+    return render_template('3d_prints.html', user=current_user)
+
+@pages.route('/rklb',methods=['GET', 'POST'])
+def rklb():
+    return render_template('rklb.html', user=current_user)
